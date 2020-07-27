@@ -5,16 +5,16 @@ import {
   Route
 } from 'react-router-dom'; 
 
-import HomeList from './homelist/HomeList';
-import DetailPage from './detailpage/DetailPage';
+import HomeContainer from './homelist/HomeContainer';
+// import DetailPage from './detailpage/DetailPage';
 
 export default function App() {
   return (
     <Router>
-      <h1>My Color App on all pages</h1>
+      <h2>Hello this is the App.js header</h2>
       <Switch>
-        <Route exact path="/:id" component={DetailPage} />
-        <Route exact path="/" component={HomeList} />
+        {/* <Route exact path="/:id" component={DetailPage} /> */}
+        <Route exact path="/" component={HomeContainer} />
       </Switch>
     </Router>
   );
