@@ -5,8 +5,8 @@ import {
   Route
 } from 'react-router-dom'; 
 
-import HomeContainer from './homelist/HomeContainer';
-import DetailPageContainer from '../containers/DetailPageContainer';
+import HomeContainer from '../../containers/HomeContainer';
+import DetailPageContainer from '../../containers/DetailPageContainer';
 
 export default function App() {
   return (

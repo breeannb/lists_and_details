@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAvatarCharactersList } from '../services/getAvatarCharactersList';
-import Characters from '../characters/Characters';
+import Characters from '../components/App/characters/Characters';
 
 const DisplayCharacters = () => {
   const [characters, setCharacters] = useState([]);

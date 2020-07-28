@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouteMatch } from 'react-router-dom';
-import { getOneCharacter } from '../App/services/getAvatarCharactersList';
-import DetailCharacter from '../App/character/DetailCharacter';
+import { getOneCharacter } from '../services/getAvatarCharactersList';
+import DetailCharacter from '../components/App/detailpagecharacter/DetailCharacter';
 
 const DetailPageContainer = () => {
   const [character, setCharacter] = useState();
