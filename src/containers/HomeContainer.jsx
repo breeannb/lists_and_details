@@ -5,13 +5,16 @@ import Characters from '../components/App/characters/Characters';
 const DisplayCharacters = () => {
   
   const {
-    characters
+    characters, 
+    incrementPage
   } = useCharacterList();
 
   return (
     <>
       <h1>Avatar Character List</h1>
-      <Characters characters={characters} />
+      <Characters characters={characters}/>
+      <button incrementPage={incrementPage}>Next</button>
+  
     </>
   );
 

@@ -7,12 +7,11 @@ export const getOneCharacter = name => {
       affiliation: character.affiliation,
       enemies: character.enemies,
       allies: character.allies,
-
     }));
 };
 
 export const getAvatarCharactersList = num => {
-  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=${num}?page=${num}`)
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?page=${num}`)
     .then(res => res.json())
     .then(characters => characters.map(character => ({
       id: character._id,
