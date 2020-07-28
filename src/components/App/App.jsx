@@ -6,15 +6,14 @@ import {
 } from 'react-router-dom'; 
 
 import HomeContainer from './homelist/HomeContainer';
-// import DetailPage from './detailpage/DetailPage';
+import DetailPageContainer from '../containers/DetailPageContainer';
 
 export default function App() {
   return (
     <Router>
-      <h2>Hello this is the App.js header</h2>
       <Switch>
-        {/* <Route exact path="/:id" component={DetailPage} /> */}
         <Route exact path="/" component={HomeContainer} />
+        <Route path="/:name" component={DetailPageContainer} />
       </Switch>
     </Router>
   );

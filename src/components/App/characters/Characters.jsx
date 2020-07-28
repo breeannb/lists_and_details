@@ -13,8 +13,6 @@ const Characters = ({ characters }) => {
     </li>
   ));
 
-
-  
   return (
     <ul>
       {characterElements}
@@ -25,8 +23,8 @@ const Characters = ({ characters }) => {
 
 Characters.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    photoUrl: PropTypes.string.isRequired
+    name: PropTypes.string,
+    photoUrl: PropTypes.string
   })).isRequired
 };
 

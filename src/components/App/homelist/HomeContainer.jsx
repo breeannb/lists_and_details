@@ -11,7 +11,10 @@ const DisplayCharacters = () => {
   }, []);
 
   return (
-    <Characters characters={characters} />
+    <>
+      <h1>Avatar Character List</h1>
+      <Characters characters={characters} />
+    </>
   );
 
 };
