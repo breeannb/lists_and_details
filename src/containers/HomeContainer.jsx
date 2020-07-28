@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { getAvatarCharactersList } from '../services/getAvatarCharactersList';
+import React from 'react';
+import { useCharacterList } from '../hooks/homeContainerHooks';
 import Characters from '../components/App/characters/Characters';
 
 const DisplayCharacters = () => {
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    getAvatarCharactersList()
-      .then(fetchList => setCharacters(fetchList));
-  }, []);
+  
+  const {
+    characters
+  } = useCharacterList();
 
   return (
     <>
@@ -20,4 +18,3 @@ const DisplayCharacters = () => {
 };
 
 export default DisplayCharacters;
-

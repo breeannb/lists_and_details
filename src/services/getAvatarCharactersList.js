@@ -11,8 +11,8 @@ export const getOneCharacter = name => {
     }));
 };
 
-export const getAvatarCharactersList = () => {
-  return fetch('https://last-airbender-api.herokuapp.com/api/v1/characters')
+export const getAvatarCharactersList = num => {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=${num}?page=${num}`)
     .then(res => res.json())
     .then(characters => characters.map(character => ({
       id: character._id,

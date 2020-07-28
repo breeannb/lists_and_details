@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const DetailCharacter = ({ name, photoUrl, affiliation, enemies, allies }) => {
   return (
     <section>
-      
       <img src={photoUrl} alt={name} width="250" />
       <h4>{name}</h4>
       <p>{affiliation}</p>

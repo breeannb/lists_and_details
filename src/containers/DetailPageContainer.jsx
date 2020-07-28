@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useRouteMatch } from 'react-router-dom';
-import { getOneCharacter } from '../services/getAvatarCharactersList';
+import React from 'react';
 import DetailCharacter from '../components/App/detailpagecharacter/DetailCharacter';
 import Header from '../components/header/Header';
+import { useOneCharacter } from '../hooks/detailPageContainerHooks';
 
 const DetailPageContainer = () => {
-  const [character, setCharacter] = useState();
-  const match = useRouteMatch('/:name');
 
-  useEffect(() => {
-    getOneCharacter(match.params.name)
-      .then(oneCharacter => setCharacter(oneCharacter));
-  }, []);
+  const {
+    character
+  } = useOneCharacter();
 
   return (
     <>
