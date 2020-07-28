@@ -6,6 +6,8 @@ export const getOneCharacter = name => {
       photoUrl: character.photoUrl,
       affiliation: character.affiliation,
       enemies: character.enemies,
+      allies: character.allies,
+
     }));
 };
 
