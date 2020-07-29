@@ -10,12 +10,7 @@ export const getOneCharacter = name => {
     }));
 };
 
-export const getAvatarCharactersList = num => {
-  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?page=${num}`)
-    .then(res => res.json())
-    .then(characters => characters.map(character => ({
-      id: character._id,
-      name: character.name,
-      photoUrl: character.photoUrl
-    })));
+export const getAvatarCharactersList = page => {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?page=${page}`)
+    .then(res => res.json());
 };

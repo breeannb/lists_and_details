@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailCharacter from '../components/App/detailpagecharacter/DetailCharacter';
+import DetailCharacter from '../components/detailpagecharacter/DetailCharacter';
 import Header from '../components/header/Header';
 import { useOneCharacter } from '../hooks/detailPageContainerHooks';
 

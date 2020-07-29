@@ -3,23 +3,27 @@ import { getAvatarCharactersList } from '../services/getAvatarCharactersList';
 
 export const useCharacterList = () => {
   const [characters, setCharacters] = useState([]);
-  const [num, setNum] = useState([]);
-
-  const incrementPage = () => {
-    getAvatarCharactersList(num + 1)
-      .then(({ results }) => { 
-        setCharacters(results);
-        setNum(num + 1);
-      });
-  };
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     getAvatarCharactersList()
       .then(fetchList => setCharacters(fetchList));
   }, []);
 
-  return {
-    characters, 
-    incrementPage
+  useEffect(() => {
+    getAvatarCharactersList(page)
+      .then(perPageCharacters => setCharacters(perPageCharacters));
+  }, [page]);
+
+  const handleChange = ({ target }) => {
+    if(page === 1 && Number(target.value) === -1) return;
+    if(characters[0] === undefined && Number(target.value) === 1) return;
+    setPage(page + Number(target.value));
   };
+
+  return {
+    characters,
+    handleChange,
+  };
+
 };

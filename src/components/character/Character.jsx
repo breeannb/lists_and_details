@@ -13,9 +13,7 @@ const Character = ({ name, photoUrl }) => {
 
 Character.propTypes = {
   name: PropTypes.string.isRequired,
-  photoUrl: PropTypes.string.isRequired,
-  affiliation: PropTypes.string.isRequired, 
-  enemies: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string
 };
 
 
